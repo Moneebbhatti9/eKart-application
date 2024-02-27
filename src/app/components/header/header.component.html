@@ -1,0 +1,104 @@
+<div class="container-fluid notify-bar">
+  <h4 class="top-bar-text">
+    Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
+  </h4>
+  <a href="" class="top-bar-link">Shop Now</a>
+</div>
+<nav
+  class="navbar navbar-expand-lg navbar-light"
+  style="border-bottom: 0.5px solid"
+>
+  <div class="container-fluid container-padding">
+    <a class="navbar-brand" href="#">
+      <div class="eKart-logo">eKart Exclusive</div></a
+    >
+
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul
+          class="navbar-nav justify-content-center flex-grow-1 pe-3 nav-links"
+        >
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Signup</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      "
+    >
+      <div class="search-wrapper">
+        <div class="search-box">
+          <input
+            type="search"
+            name="search"
+            id=""
+            class="search-input"
+            placeholder="What are you looking for?"
+          />
+          <i class="fa-solid fa-magnifying-glass search-btn"></i>
+        </div>
+
+        <i
+          class="fa-solid fa-magnifying-glass small-search-btn"
+          (click)="toggleSearch()"
+        ></i>
+
+        <div
+          class="icon-wrapper"
+          style="display: flex; gap: 1rem; align-items: center"
+        >
+          <i class="fa-regular fa-heart icon"></i>
+          <i class="fa-solid fa-cart-shopping icon"></i>
+        </div>
+      </div>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="smallScreenSearch" *ngIf="openSearch">
+  <input
+    type="search"
+    name="search"
+    id=""
+    class="small-search-input"
+    placeholder="What are you looking for?"
+  />
+</div>

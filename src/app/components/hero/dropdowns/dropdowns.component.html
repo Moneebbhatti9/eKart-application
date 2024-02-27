@@ -1,0 +1,51 @@
+<div class="dropdown-layout">
+  <ul class="menu">
+    <li
+      style="
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+      "
+      *ngFor="let menu of menuItem; let i = index"
+    >
+      <span
+        style="
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 10px;
+          cursor: pointer;
+        "
+        (click)="toggleMenu(i)"
+        >{{ menu.name }}
+        <ng-container *ngIf="menu.subMenu">
+          <i
+            class="fa-solid"
+            [ngClass]="{
+              'fa-angle-right': !menu.isOpen,
+              'fa-angle-down': menu.isOpen
+            }"
+            style="cursor: pointer"
+          ></i> </ng-container
+      ></span>
+      <ng-container *ngIf="i < 2 && menu.isOpen">
+        <div class="sub-menu-container">
+          <ul
+            class="sub-menu"
+            style="
+              display: flex;
+              flex-direction: column;
+              list-style: none;
+              padding-left: 10px;
+            "
+          >
+            <li>Shirts</li>
+            <li>Pants</li>
+          </ul>
+        </div>
+      </ng-container>
+    </li>
+  </ul>
+</div>

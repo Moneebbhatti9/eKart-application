@@ -1,0 +1,33 @@
+.dropdown-layout {
+  padding: 2rem 0.8rem 0rem 0rem;
+  border-right: 0.5px solid;
+  max-width: 250px;
+  max-height: 344px;
+  overflow-y: scroll;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+
+.dropdown-layout::-webkit-scrollbar {
+  width: 5px;
+}
+
+.dropdown-layout::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.dropdown-layout::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.dropdown-layout::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
